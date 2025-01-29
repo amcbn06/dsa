@@ -14,7 +14,7 @@ struct MaxFlow {
     MaxFlow(int V) : V(V), E(0) {
         g.resize(V);
     }
-    void addEdge(int from, int to, flow_t capacity) {
+    void addEdge(int from, int to, flow_t capacity = numeric_limits<flow_t>::max()) {
         g[from].push_back(E++);
         edges.emplace_back(from, to, capacity);
         g[to].push_back(E++);
