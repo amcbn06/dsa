@@ -10,7 +10,7 @@ struct Edge {
 
 // Dinic's algorithm for max flow on undirected graphs
 struct MaxFlow {
-    int V, E;
+    int V, E = 0;
     MaxFlow(int V) : V(V), E(0) {
         g.resize(V);
     }
@@ -44,8 +44,8 @@ struct MaxFlow {
             return level[sink] != -1; // found a augmenting path
         };
         function<flow_t(int, flow_t)> dfs = [&](int u, flow_t pushed) {
-            if (pushed == 0) {
-                return 0;
+            if (pushed == (flow_t)0) {
+                return (flow_t)0;
             }
             if (u == sink) {
                 return pushed;
@@ -63,7 +63,7 @@ struct MaxFlow {
                 edges[i ^ 1].flow -= returned;
                 return returned;
             }
-            return 0;
+            return (flow_t)0;
         };
         flow_t f = 0;
         while (bfs()) {
