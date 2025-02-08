@@ -1,3 +1,4 @@
+// Data structure that computes LCA and K-th ancestor using binary lifting
 struct LowestCommonAncestor {
 	int V = 0, lgV = 0;
 	LowestCommonAncestor(int V, int root = 1) : V(V) {
@@ -33,7 +34,6 @@ struct LowestCommonAncestor {
 			};
 		dfs(root, -1);
 	}
-	// is u ancestor of v
 	bool isAncestor(int u, int v) {
 		return tin[u] <= tin[v] && tout[v] <= tout[u];
 	}
@@ -50,6 +50,14 @@ struct LowestCommonAncestor {
 			}
 		}
 		return anc[v][0];
+	}
+	int kthAncestor(int u, int k) {
+		for (int i = lgV; i >= 0; --i) {
+			if ((k >> i) & 1) {
+				u = anc[u][i];
+			}
+		}
+		return u;
 	}
 private:
 	vector<int> depth, tin, tout;
