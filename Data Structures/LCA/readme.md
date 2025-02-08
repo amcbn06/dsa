@@ -4,6 +4,7 @@ The complexities are written in the notation < $O(f(n)),\ O(g(n))$ >, meaning th
 
 ## I. Binary lifting
 ##### Time complexity: < $O(n\log{}n), O(\log{}n)$ >
+##### Space complexity: $O(n\log{}n)$
 Description: By precomputing for each node $u$ in $anc[u][p]$ it's $2^p$-th ancestor, we can use these links to traverse the tree in logarithmic time. By precomputing the entry time and exit time for each node $u$, we can check if a node $v$ is in the subtree of node $u$ by checking if the range $[entry(v),\ exit(v)]$ is included in the range $[entry(u),\ exit(u)]$. Using these two precalculations, we can find the lowest common ancestor of $u$ and $v$ by progressively raising $v$ up by a powers of 2 as long as it does not become an ancestor of $u$. Then if we raise $v$ one more time we reach the lca.
 
 Code: [binary_lifting.cpp](binary_lifting.cpp)
