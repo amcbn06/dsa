@@ -15,8 +15,11 @@ Code: [binary_lifting.cpp](binary_lifting.cpp)
 
 ## II. Sparse table on Euler Tour
 ##### Time complexity: < $O(n\log{}n), O(1)$ >
-Description: \
-Code: 
+Description: By computing the Euler Tour of the tree and than RMQ on it (instead of the minimum value we pick the node with the smaller depth) we can compute in O(1) the lca for any two nodes $u$ and $v$.
+
+Code: [euler_tour_rmq.cpp](euler_tour_rmq.cpp)
+
+###### Note: this technique is very useful when the number of queries is greater than the number of nodes, as the time complexity of each query is O(1)
 
 ## III. Segment Tree on Euler Tour
 ##### Time complexity: < $O(n), O(\log{}n)$ >
