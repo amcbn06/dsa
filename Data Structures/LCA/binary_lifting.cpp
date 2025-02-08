@@ -18,7 +18,7 @@ struct LowestCommonAncestor {
 		depth.resize(V + 1);
 		int timer = 0;
 		function<void(int, int)> dfs = [&](int u, int par) {
-			tin[u] = ++timer;
+			tin[u] = timer++;
 			for (auto& v : g[u]) {
 				if (v == par) {
 					continue;
@@ -30,7 +30,7 @@ struct LowestCommonAncestor {
 				}
 				dfs(v, u);
 			}
-			tout[u] = ++timer;
+			tout[u] = timer++;
 			};
 		dfs(root, -1);
 	}
