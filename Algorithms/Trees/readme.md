@@ -11,8 +11,8 @@ A few methods for finding the lowest common ancestor of two nodes in a tree:
 1. Binary lifting
 2. Sparse table on Euler Tour
 3. Segment Tree on Euler Tour
-4. Tarjan's Offline LCA algorithm
-5. ??? (online)
+4. Tarjan's Offline algorithm
+5. Farach-Colton and Bender's algorithm
 
 ### Heavy Light Decomposition (HLD)
 
