@@ -12,14 +12,14 @@ struct FenwickTree {
             table[i] += x;
         }
     }
-    T query(int i) {
+    T get(int i) {
         T sum = 0;
         for (; i > 0; i -= i & -i) {
             sum += table[i];
         }
         return sum;
     }
-    T query(int i, int j) {
-        return query(j) - query(i - 1);
+    T get(int i, int j) {
+        return get(j) - get(i - 1);
     }
 };
