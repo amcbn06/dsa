@@ -5,8 +5,8 @@ The complexities are written in the notation < $O(f(n)),\ O(g(n))$ >, meaning th
 
 
 ## I. Binary Lifting
-##### Time complexity: < $O(n\log{}n), O(\log{}n)$ >
-##### Space complexity: $O(n\log{}n)$
+##### Time complexity: < $O(n\log{n}), O(\log{n})$ >
+##### Space complexity: $O(n\log{n})$
 
 Description: By precomputing for each node $u$ in $anc[u][p]$ it's $2^p$-th ancestor, we can use these links to traverse the tree in logarithmic time. By precomputing the entry time and exit time for each node $u$, we can check if a node $v$ is in the subtree of node $u$ by checking if the range $[entry(v),\ exit(v)]$ is included in the range $[entry(u),\ exit(u)]$. Using these two precalculations, we can find the lowest common ancestor of $u$ and $v$ by progressively raising $v$ up by a powers of 2 as long as it does not become an ancestor of $u$. Then if we raise $v$ one more time we reach the lca.
 
@@ -22,8 +22,8 @@ Sample implementation (distance between nodes): [CSES - Distance Queries](https:
 
 
 ## II. Sparse table on Euler Tour
-##### Time complexity: < $O(n\log{}n), O(1)$ >
-##### Space complexity: $O(n\log{}n)$
+##### Time complexity: < $O(n\log{n}), O(1)$ >
+##### Space complexity: $O(n\log{n})$
 
 Description: By computing the Euler Tour of the tree and than RMQ on it (instead of the minimum value we pick the node with the smaller depth) we can compute in $O(1)$ the lca for any two nodes $u$ and $v$.
 
@@ -34,8 +34,8 @@ Code: [euler_tour_rmq.cpp](euler_tour_rmq.cpp)
 
 
 ## III. Segment Tree on Euler Tour
-##### Time complexity: < $O(n), O(\log{}n)$ >
-##### Space complexity: $O(n\log{}n)$
+##### Time complexity: < $O(n), O(\log{n})$ >
+##### Space complexity: $O(n\log{n})$
 
 Description: Based on the same reasoning as above, but instead of RMQ using Segment Tree, we can do the precomputing in $O(n)$, but the time complexity of the queries will be logarithmic. 
 
@@ -59,7 +59,7 @@ Code:
 ## IV. Farach-Colton and Bender's algorithm
 ##### Time complexity: < $O(n), O(1)$ >
 
-Description: The idea is to split the array into blocks of size $\frac{\log{}n}{2}$, precompute the RMQ sparse table of these blocks just like in [II](https://github.com/amcbn06/dsa/edit/main/Algorithms/Trees/Lowest%20Common%20Ancestor%20(LCA)/readme.md#ii-sparse-table-on-euler-tour), precompute the answers of each subarray of the blocks (which we can notice we can turn into bitmasks taking advantage of the fact that adjacent values have absolute difference of exactly 1, therefore only $\sqrt{n}$ masks are possible) and use all these precomputations to answer each query in constant time.
+Description: The idea is to split the array into blocks of size $\frac{\log{n}}{2}$, precompute the RMQ sparse table of these blocks just like in [II](https://github.com/amcbn06/dsa/edit/main/Algorithms/Trees/Lowest%20Common%20Ancestor%20(LCA)/readme.md#ii-sparse-table-on-euler-tour), precompute the answers of each subarray of the blocks (which we can notice we can turn into bitmasks taking advantage of the fact that adjacent values have absolute difference of exactly 1, therefore only $\sqrt{n}$ masks are possible) and use all these precomputations to answer each query in constant time.
 
 Code:
 
@@ -67,10 +67,10 @@ Code:
 
 
 
-###### Additional resources:
-###### 1. [cp-algorithms/lca](https://cp-algorithms.com/graph/lca.html)
-###### 2. [cp-algorithms/lca_binary_lifting](https://cp-algorithms.com/graph/lca_binary_lifting.html)
-###### 2. [cp-algorithms/lca_tarjan](https://cp-algorithms.com/graph/lca_tarjan.html)
-###### 2. [cp-algorithms/lca_farachcoltonbender](https://cp-algorithms.com/graph/lca_farachcoltonbender.html)
-###### 5. [InfoGym - RMQ & LCA lecture - Alexandru Ionita](https://drive.google.com/file/d/1w82-T2goHBIelf-_-ZLImZ8IHQjQ3IJD/view)
-###### 6. [ResearchGate - Farach-Colton and Bender's algorithm](https://www.researchgate.net/publication/220980109_The_LCA_problem_revisited)
+### Additional resources:
+1. [cp-algorithms/lca](https://cp-algorithms.com/graph/lca.html)
+2. [cp-algorithms/lca_binary_lifting](https://cp-algorithms.com/graph/lca_binary_lifting.html)
+3. [cp-algorithms/lca_tarjan](https://cp-algorithms.com/graph/lca_tarjan.html)
+4. [cp-algorithms/lca_farachcoltonbender](https://cp-algorithms.com/graph/lca_farachcoltonbender.html)
+5. [InfoGym - RMQ & LCA lecture - Alexandru Ionita](https://drive.google.com/file/d/1w82-T2goHBIelf-_-ZLImZ8IHQjQ3IJD/view)
+6. [ResearchGate - Farach-Colton and Bender's algorithm](https://www.researchgate.net/publication/220980109_The_LCA_problem_revisited)
