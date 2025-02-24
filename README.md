@@ -58,9 +58,9 @@ This is the data structures category.
 
 ### Trees
 - [ ] Fenwick Tree / Binary Indexed Tree (BIT)
-  - [ ] prefix_sum.cpp
+  - [x] prefix_sum.cpp
   - [ ] prefix_min.cpp
-  - [ ] range_add.cpp
+  - [x] range_add.cpp
   - [ ] range_add_range_sum.cpp
   - [ ] 2d_prefix_sum.cpp
   - [ ] readme.md
