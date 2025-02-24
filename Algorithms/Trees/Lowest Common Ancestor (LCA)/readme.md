@@ -56,7 +56,7 @@ Code: ***#todo***
 
 
 
-## IV. Farach-Colton and Bender's algorithm
+## V. Farach-Colton and Bender's algorithm
 ##### Time complexity: < $O(n), O(1)$ >
 
 Description: The idea is to split the array into blocks of size $\frac{\log{n}}{2}$, precompute the RMQ sparse table of these blocks just like in [II](https://github.com/amcbn06/dsa/edit/main/Algorithms/Trees/Lowest%20Common%20Ancestor%20(LCA)/readme.md#ii-sparse-table-on-euler-tour), precompute the answers of each subarray of the blocks (which we can notice we can turn into bitmasks taking advantage of the fact that adjacent values have absolute difference of exactly 1, therefore only $\sqrt{n}$ masks are possible) and use all these precomputations to answer each query in constant time.
