@@ -36,12 +36,12 @@ This is the algorithms category.
 
 ### Trees
 - [ ] Lowest Common Ancestor (LCA)
-  - [ ] binary_lifting.cpp
-  - [ ] euler_tour_rmq.cpp
-  - [ ] euler_tour_segment_tree.cpp
+  - [x] binary_lifting.cpp
+  - [x] euler_tour_rmq.cpp
+  - [x] euler_tour_segment_tree.cpp
   - [ ] tarjan_offline.cpp
   - [ ] farach-colton_bender.cpp
-  - [ ] readme.md
+  - [x] readme.md
 - [ ] Rerooting technique
   - [ ] rerooting.cpp
   - [ ] readme.md
