@@ -50,7 +50,7 @@ Code: [euler_tour_segment_tree.cpp](euler_tour_segment_tree.cpp)
 
 Description: If we know in advance for each node the queries it takes part in, we can do a DFS traversal of the tree and we progressively combine subtrees using DSU. Than taking advantage of the way DFS works, we can find the lowest common ancestor between the current node and any previously visited node.
 
-Code:
+Code: ***#todo***
 
 ###### Note: even though the complexity is superior to the techniques from above, the clear disadvantage is that we have to know all the queries in advance
 
@@ -61,7 +61,7 @@ Code:
 
 Description: The idea is to split the array into blocks of size $\frac{\log{n}}{2}$, precompute the RMQ sparse table of these blocks just like in [II](https://github.com/amcbn06/dsa/edit/main/Algorithms/Trees/Lowest%20Common%20Ancestor%20(LCA)/readme.md#ii-sparse-table-on-euler-tour), precompute the answers of each subarray of the blocks (which we can notice we can turn into bitmasks taking advantage of the fact that adjacent values have absolute difference of exactly 1, therefore only $\sqrt{n}$ masks are possible) and use all these precomputations to answer each query in constant time.
 
-Code:
+Code: ***#todo***
 
 ###### Note: due to the complexity of the algorithm, the reader is advised to check the resources listed below
 
