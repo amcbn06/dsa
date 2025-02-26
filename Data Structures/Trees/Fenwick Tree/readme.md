@@ -97,6 +97,9 @@ Code: ***#todo***
 
 
 
+### Additional problems
+1. [perm - ONI 2024 Baraj Seniori](https://kilonova.ro/problems/2669?list_id=1082)
+
 ### Additional resources
 1. [cp-algorithms/fenwick](https://cp-algorithms.com/data_structures/fenwick.html)
 2. [Brilliant](https://brilliant.org/wiki/fenwick-tree/) - a very begginer-friendly explaination
