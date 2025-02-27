@@ -87,19 +87,38 @@ Code: ***#todo***
 
 ### 4. Prefix minimum
 
-Code: ***#todo***
+Almost the same implementation as the classical Fenwick Tree, except with 2 downsides: we can't find the minimum of ranges $[l, r]$, only prefixes $[1, i]$, and when an update occurs, the new value must be $\leq$ than the old one. 
+
+Code: [prefix_min.cpp](prefix_min.cpp)
 
 
 
 ### 5. 2D Fenwick Tree
 
-Code: ***#todo***
+The though process is the same as the one for the 1D Fenwick Tree, but for both axes: for updates, we start with $i$, then jump to $i + 2^{lsb(i)}$ and so on, and for each $i$ we start with $j$, then jump to $j + 2^{lsb(j)}$ and so on. All in all the update function looks something like this:
+
+```cpp
+void add(int i, int j, int x) {
+    for (; i <= N; i += i & -i) {
+        for (int jj = j; jj <= M; jj += jj & -jj) {
+            t[i][jj] += x;
+        }
+    }
+}
+```
+
+The query function works similarly. Sample problem: [Forest Queries II](https://cses.fi/problemset/task/1739) (+ [implementation](https://cses.fi/paste/a840cc9a0a533d45b9d33a/))
+
+<<<<<<< HEAD
+Code: [2d_prefix_sum.cpp](2d_prefix_sum.cpp)
 
 
 
+=======
 ### Additional problems
 1. [perm - ONI 2024 Baraj Seniori](https://kilonova.ro/problems/2669?list_id=1082)
 
+>>>>>>> 74375b97e5597a00d8af81118c2fe80b78a7f75c
 ### Additional resources
 1. [cp-algorithms/fenwick](https://cp-algorithms.com/data_structures/fenwick.html)
 2. [Brilliant](https://brilliant.org/wiki/fenwick-tree/) - a very begginer-friendly explaination
