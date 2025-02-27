@@ -113,7 +113,6 @@ Code: [2d_prefix_sum.cpp](2d_prefix_sum.cpp)
 
 
 
-=======
 ### Additional problems
 1. [perm - ONI 2024 Baraj Seniori](https://kilonova.ro/problems/2669?list_id=1082)
 
