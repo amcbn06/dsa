@@ -109,7 +109,6 @@ void add(int i, int j, int x) {
 
 The query function works similarly. Sample problem: [Forest Queries II](https://cses.fi/problemset/task/1739) (+ [implementation](https://cses.fi/paste/a840cc9a0a533d45b9d33a/))
 
-<<<<<<< HEAD
 Code: [2d_prefix_sum.cpp](2d_prefix_sum.cpp)
 
 
@@ -118,7 +117,6 @@ Code: [2d_prefix_sum.cpp](2d_prefix_sum.cpp)
 ### Additional problems
 1. [perm - ONI 2024 Baraj Seniori](https://kilonova.ro/problems/2669?list_id=1082)
 
->>>>>>> 74375b97e5597a00d8af81118c2fe80b78a7f75c
 ### Additional resources
 1. [cp-algorithms/fenwick](https://cp-algorithms.com/data_structures/fenwick.html)
 2. [Brilliant](https://brilliant.org/wiki/fenwick-tree/) - a very begginer-friendly explaination
