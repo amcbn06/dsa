@@ -2,7 +2,7 @@ template<typename T>
 struct MinFenwickTree {
     vector<T> table;
     int size;
-    FenwickTree(int size = 0) {
+    MinFenwickTree(int size = 0) {
         this->size = size;
         table.assign(size + 1, numeric_limits<T>::max());
     }
