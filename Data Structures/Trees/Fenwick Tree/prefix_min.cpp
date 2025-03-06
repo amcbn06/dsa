@@ -11,11 +11,11 @@ struct MinFenwickTree {
             table[i] = min(table[i], x);
         }
     }
-    T get(int i) {
+    T query(int i) {
         T res = numeric_limits<T>::max();
         for (; i > 0; i -= i & -i) {
             res = min(res, table[i]);
         }
-        return sum;
+        return res;
     }
 };
