@@ -118,5 +118,5 @@ Code: [2d_prefix_sum.cpp](2d_prefix_sum.cpp)
 
 ### Additional resources
 1. [cp-algorithms/fenwick](https://cp-algorithms.com/data_structures/fenwick.html)
-2. [Brilliant](https://brilliant.org/wiki/fenwick-tree/) - a very begginer-friendly explaination
+2. [Brilliant](https://brilliant.org/wiki/fenwick-tree/) - a very beginner-friendly explaination
 3. [Algorithmica](https://en.algorithmica.org/hpc/data-structures/segment-trees/#fenwick-trees) - a very detailed explaination + comparison with segment tree (that includes benchmarks)
