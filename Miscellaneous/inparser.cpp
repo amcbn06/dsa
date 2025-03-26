@@ -39,4 +39,4 @@ private:
 		}
 		return buffer[index];
 	}
-} fin("aventura.in");
+};
