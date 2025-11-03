@@ -35,7 +35,7 @@ Code: [euler_tour_rmq.cpp](euler_tour_rmq.cpp)
 
 ## III. Segment Tree on Euler Tour
 ##### Time complexity: < $O(n), O(\log{n})$ >
-##### Space complexity: $O(n\log{n})$
+##### Space complexity: $O(n)$
 
 Description: Based on the same reasoning as above, but instead of RMQ using Segment Tree, we can do the precomputing in $O(n)$, but the time complexity of the queries will be logarithmic. 
 
