@@ -49,20 +49,22 @@ struct modint {
     }
 };
 
-const int precmax = 2e5;
-modint fact[precmax + 5]{ 1, 1 };
-modint inv[precmax + 5]{ 1, 1 };
-modint invf[precmax + 5]{ 1, 1 };
+const int precmax = 3e5;
+modint fact[precmax + 1]{ 1 };
+modint invf[precmax + 1]{ 1 };
+modint p2[precmax + 1]{ 1 };
 
 void prec() {
-    int modulo = modint().modulo();
-    for (int i = 2; i <= precmax; ++i) {
+    for (int i = 1; i <= precmax; ++i) {
         fact[i] = fact[i - 1] * i;
-        inv[i] = inv[modulo % i] * (modulo - modulo / i);
-        invf[i] = invf[i - 1] * inv[i];
+        p2[i] = p2[i] * 2;
+    }
+    invf[precmax] = fact[precmax].inv();
+    for (int i = precmax; i >= 1; --i) {
+        invf[i - 1] = invf[i] * i;
     }
 }
-
+ 
 modint combs(int n, int k) {
     return k < 0 || n < 0 || n - k < 0 ? 0 : fact[n] * invf[k] * invf[n - k];
 }
