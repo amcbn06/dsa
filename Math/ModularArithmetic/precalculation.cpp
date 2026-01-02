@@ -49,7 +49,7 @@ struct modint {
     }
 };
 
-const int precmax = 3e5;
+const int precmax = 1e6;
 modint fact[precmax + 1]{ 1 };
 modint invf[precmax + 1]{ 1 };
 modint p2[precmax + 1]{ 1 };
@@ -57,7 +57,7 @@ modint p2[precmax + 1]{ 1 };
 void prec() {
     for (int i = 1; i <= precmax; ++i) {
         fact[i] = fact[i - 1] * i;
-        p2[i] = p2[i] * 2;
+        p2[i] = p2[i - 1] * 2;
     }
     invf[precmax] = fact[precmax].inv();
     for (int i = precmax; i >= 1; --i) {
