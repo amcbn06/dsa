@@ -6,91 +6,91 @@ This is the algorithms category.
 
 ### Graphs
 - Flows
-  - `max_flow_min_cost.cpp`
   - `max_flow_dinic_directed.cpp`
   - `max_flow_dinic_undirected.cpp`
+  - `max_flow_min_cost.cpp`
 - Matchings
   - `max_matching.cpp`
 
 ### Strings
-- Aho–Corasick algorithm
-  - `aho_corasick.cpp`
+- Aho-Corasik
+  - `aho_corasik.cpp`
 
 ### Trees
-- Lowest Common Ancestor (LCA)
+- Lowest Common Ancestor
   - `binary_lifting.cpp`
   - `euler_tour_rmq.cpp`
   - `euler_tour_segment_tree.cpp`
-  - `README.md`
+  - `readme.md`
 
 
 ## Data Structures
 This is the data structures category.
 
-### Graphs
-- Union Find / Disjoint Set Union (DSU)
-  - `union_find.cpp`
-
-### Strings
-- Trie / Prefix Tree
-  - `trie.cpp`
-  - `map_trie.cpp`
-
 ### Trees
-- Fenwick Tree / Binary Indexed Tree (BIT)
-  - `prefix_sum.cpp`
-  - `prefix_min.cpp`
-  - `range_add.cpp`
+- Fenwick Tree
   - `2d_prefix_sum.cpp`
-  - `README.md`
+  - `prefix_min.cpp`
+  - `prefix_sum.cpp`
+  - `range_add.cpp`
+  - `readme.md`
 - Segment Tree
   - `lazy_segment_tree_template.cpp`
-  - `range_add_range_max.cpp`
-  - `range_add_range_min.cpp`
+  - `range_add_range_max_segment_tree.cpp`
+  - `range_add_range_min_segment_tree.cpp`
+
+### Trie
+- `map_trie.cpp`
+- `trie.cpp`
+
+### Union Find
+- `union_find.cpp`
 
 
 ## Geometry
 This is the geometry category.
 
-- Primitives
-  - `geometry.cpp`
-  - `point.cpp`
-  - `segment.cpp`
-  - `TODO.md`
+- `Fraction.cpp`
+- `Point.cpp`
+- `geometry.cpp`
+- `segment.cpp`
 
 
 ## Math
 This is the math category.
 
-- Fraction
-  - `fraction.cpp`
-- Long Arithmetic
-  - `bignumber_v1.cpp`
-  - `bignumber_v1_comments.cpp`
-  - `bignumber_v1_compact.cpp`
-  - `bignumber_v2.cpp`
-  - `README.md`
-- Matrix
-  - `matrix.cpp`
-- Modular Arithmetic
-  - `hashing.cpp`
-  - `modint.cpp`
-  - `precalculation.cpp`
-- Number Theory
-  - `congruence.cpp`
-  - `safe_diophantine.cpp`
+### Long Arithmetic
+- `version_1/big_number.cpp`
+- `version_1/big_number_comments.cpp`
+- `version_2/big_number.cpp`
+- `readme.md`
+
+### Matrix
+- `matrix.cpp`
+
+### Modular Arithmetic
+- `hashing.cpp`
+- `modint.cpp`
+- `precalculation.cpp`
+
+### Number Theory
+- `congruence.cpp`
+- `safe_diophantine.cpp`
 
 
 ## Miscellaneous
 This is the miscellaneous category.
 
-- Custom Data Structures
-  - `dynamic_array.cpp`
-  - `stack_rmq.cpp`
-- IO Parsers
-  - `inparser.cpp`
-  - `inparser2.cpp`
-- Sieves
-  - `msb_sieve.cpp`
-  - `popcount_sieve.cpp`
-  - `root_number_sieve.cpp`
+### Custom Data Structures
+- `dynamic_array.cpp`
+- `main.cpp`
+- `stack_rmq.cpp`
+
+### Parsers
+- `input_parser.cpp`
+- `input_parser_2.cpp`
+
+### Sieves
+- `msb_sieve.cpp`
+- `popcount_sieve.cpp`
+- `root_number_sieve.cpp`
